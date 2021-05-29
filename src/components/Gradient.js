@@ -6,7 +6,7 @@ import GradientTags from "./GradientTags"
 import { FilterContext } from "./context/FilterContext"
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from "react-router-dom"
 
-const Gradient = ({ colorStart, colorEnd, name, tags }) => {
+const Gradient = ({ colorStart, colorEnd, name, tags, id }) => {
   const { filter } = useContext(FilterContext)
   return (
     <li className="col-lg-3 col-md-4 col-sm-6">

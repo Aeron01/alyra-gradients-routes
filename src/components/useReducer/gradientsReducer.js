@@ -17,7 +17,6 @@ export const gradientsReducer = (state, action) => {
     case "FETCH_FAILURE":
       return {
         ...state,
-        loading: false,
         error: action.payload,
       }
     case "INIT_PAGE":

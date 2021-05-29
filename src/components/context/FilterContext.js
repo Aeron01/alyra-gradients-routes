@@ -12,8 +12,6 @@ export const FilterContextProvider = ({ children }) => {
     gradientList: [],
     loading: false,
     error: "",
-    page: 1,
-    hasNext: null,
   }
 
   useEffect(() => {
@@ -37,8 +35,28 @@ export const FilterContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(gradientsReducer, initialState)
   const { gradientList, loading } = state;
 
+  function allTags(list) {
+    /* retourner la liste des tags uniques */
+    let listTotal = []
+    for (let element of list) {
+      if ("tags" in element) {
+        listTotal = listTotal.concat(element.tags)
+      }
+    }
+    const listTagsUnique = []
+    listTotal.forEach((el) => {
+      if (!listTagsUnique.includes(el)) {
+        //listTagsUnique = listTagsUnique.concat([el])
+        listTagsUnique.push(el)
+      }
+    })
+    return listTagsUnique
+  }
+
+  const tags = allTags(gradientList)
+
   return (
-    <FilterContext.Provider value={{ gradientList, loading, filter, setFilter }}>
+    <FilterContext.Provider value={{ gradientList, loading, filter, setFilter, tags }}>
       {children}
     </FilterContext.Provider>
   )
