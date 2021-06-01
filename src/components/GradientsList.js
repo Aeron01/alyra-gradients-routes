@@ -3,7 +3,7 @@ import Gradient from "./Gradient"
 import { FilterContext } from "./context/FilterContext"
 
 const GradientsList = () => {
-  const { filter, gradientList, loading } = useContext(FilterContext)
+  const { filter, gradientList, /*loading*/ } = useContext(FilterContext)
   const list = gradientList.filter((el) => {
     if (filter === "all") {
       return true
@@ -27,9 +27,9 @@ const GradientsList = () => {
           )
         })}
       </ul>
-      {loading && <p className="text-center">loading... </p>}
     </>
   )
 }
+//{loading && <p className="text-center">loading... </p>}
 
 export default GradientsList

@@ -4,7 +4,7 @@ import GradientPill from "./GradientPill"
 import GradientCode from "./GradientCode"
 import GradientTags from "./GradientTags"
 import { FilterContext } from "./context/FilterContext"
-import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from "react-router-dom"
+
 
 const Gradient = ({ colorStart, colorEnd, name, tags, id }) => {
   const { filter } = useContext(FilterContext)

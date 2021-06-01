@@ -7,6 +7,7 @@ import { ReactComponent as Prev } from "bootstrap-icons/icons/arrow-left.svg"
 const GradientsHeader = ({ children }) => {
   const { gradientList } = useContext(FilterContext)
   const list = gradientList
+  console.log(list)
   const length = list.length
 
   const chooseGradient = () => Math.floor(Math.random() * length)
