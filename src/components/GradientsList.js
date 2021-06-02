@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import Gradient from "./Gradient"
-import { FilterContext } from "./context/FilterContext"
+import { FilterContext } from "../context/FilterContext"
 
 const GradientsList = () => {
   const { filter, gradientList, /*loading*/ } = useContext(FilterContext)

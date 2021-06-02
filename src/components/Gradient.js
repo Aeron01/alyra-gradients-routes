@@ -3,7 +3,7 @@ import GradientTitle from "./GradientTitle"
 import GradientPill from "./GradientPill"
 import GradientCode from "./GradientCode"
 import GradientTags from "./GradientTags"
-import { FilterContext } from "./context/FilterContext"
+import { FilterContext } from "../context/FilterContext"
 
 
 const Gradient = ({ colorStart, colorEnd, name, tags, id }) => {

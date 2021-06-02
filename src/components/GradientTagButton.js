@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { FilterContext } from "./context/FilterContext"
+import { FilterContext } from "../context/FilterContext"
 
 const GradientTagButton = ({ tag }) => {
   const { filter, setFilter } = useContext(FilterContext)

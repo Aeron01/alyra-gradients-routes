@@ -2,7 +2,7 @@
 import Gradients from "./components/Gradients"
 import GradientsHeader from "./components/GradientsHeader"
 import Footer from "./components/Footer"
-import { FilterContextProvider } from "./components/context/FilterContext"
+import { FilterContextProvider } from "./context/FilterContext"
 //import { fetchJoke } from "./Api"
 
 function App() {
